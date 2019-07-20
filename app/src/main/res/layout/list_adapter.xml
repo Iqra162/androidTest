@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="18dp"
+
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_shape"
+          >
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/bg"
+                android:layout_height="@dimen/movie_cover_height"
+                android:scaleType="fitXY"
+              android:padding="0.5dp"
+              >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/movie_cover_height"
+                android:layout_alignParentTop="true"
+           android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+android:layout_centerInParent="true"
+
+                android:clickable="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:src="@drawable/sample" />
+
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thumbnail"
+                android:paddingLeft="@dimen/movie_title_padding"
+                android:paddingTop="@dimen/movie_title_padding"
+                android:paddingRight="@dimen/movie_title_padding"
+                android:text="sdasdasdsdsd"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/movie_title_size" />
+
+            <TextView
+                android:id="@+id/overView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_title"
+                android:paddingLeft="@dimen/movie_title_padding"
+                android:paddingRight="@dimen/movie_title_padding"
+                android:paddingBottom="@dimen/movie_title_padding_bottom"
+                android:text="abbbjkbkjbkb"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/movie_overview_size" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/overView"
+                android:paddingLeft="@dimen/movie_title_padding"
+                android:paddingRight="@dimen/movie_title_padding"
+                android:paddingBottom="@dimen/movie_title_padding_bottom"
+                android:text="abbbjkbkjbkb"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/movie_date_size" />
+
+            <ImageView
+                android:id="@+id/overflow"
+                android:layout_width="@dimen/ic_movie_overflow_width"
+                android:layout_height="@dimen/ic_movie_overflow_height"
+                android:layout_below="@id/thumbnail"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/ic_movie_overflow_margin_top"
+                android:scaleType="centerCrop" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/loadmore_progress"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+     android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
